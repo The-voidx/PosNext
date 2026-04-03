@@ -6,8 +6,22 @@ limpar = os.system("clear")
 sistema = platform.system()
 arquitetura = platform.machine()
 
-#lista de progamas
-lista_gamer = ["steam", "discord", "vlc", "wine-cachyos", "wine-cachyos-opt", "wine-staging", "wine-gecko", "wine-mono", "winetricks", "govelay", "lutris", "heroic-games-laucher-bin", "protonup", "protonup-qt", "protontricks", "prismlaucher"]
+# Dicionário com os nomes corrigidos para o YAY do CachyOS
+apps = {
+    1: "steam",
+    2: "discord",
+    3: "vlc",
+    4: "wine-cachyos wine-cachyos-opt wine-staging wine-gecko wine-mono", # Pacotão Wine
+    5: "winetricks",
+    6: "goverlay",
+    7: "lutris",
+    8: "heroic-games-launcher-bin",
+    9: "protonup-qt",
+    10: "protontricks",
+    11: "prismlauncher",
+    12: "mangohud lib32-mangohud",
+    13: "gamemode lib32-gamemode"
+}
 
 print("carregando codigo aguarde...")
 time.sleep(2.0)
@@ -48,7 +62,7 @@ print(f"""
 
 
 def instalar_apps(app):
- subprocess.run(["sudo", "pacman", "-S", "--noconfirm", app])
+ subprocess.run(["sudo", "yay", "-S", "--needed", "--noconfirm", app])
 
 for app in lista_gamer:
     instalar_apps(app)
