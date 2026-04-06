@@ -6,7 +6,6 @@ os.system("clear")
 sistema = platform.system()
 arquitetura = platform.machine()
 
-# Dicionário que mcontém o número ao nome real do pacote
 apps = {
     3: "github-desktop-bin", 4: "code", 5: "kitty", 6: "geany",
     7: "ghidra", 8: "dev-toolbox", 9: "qtcreator", 10: "zed",
@@ -15,7 +14,7 @@ apps = {
     20: "xampp", 21: "netbeans", 22: "sublime-text-4"
 }
 
-# Listas de programas (nomes corrigidos para pacotes Arch/AUR)
+
 aur_list = ["ghidra", "code", "qtcreator", "kitty", "zed", "geany", "meld", "docker", "netbeans", "ghostwriter"]
 helpers_list = ["github-desktop-bin", "devtoolbox-bin", "postman-bin", "unityhub", "gamemaker-beta-bin", "typora", "oh-my-bash-git", "warp-terminal", "xampp", "sublime-text-4"]
 
